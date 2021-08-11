@@ -89,8 +89,8 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
 
 ## Post-MVP
 
-- Allow for users to make comments on others posts 
 - Implement a 'like' button
+-Display top liked posts
 
 ***
 
