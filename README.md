@@ -50,6 +50,8 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
 #### Wireframes
 
 ##### Desktop Wireframe
+Figma: https://www.figma.com/file/yTOAeTIcYj8870XiL7wFFN/LaughOutLoud?node-id=0%3A1
+
 ![Figma Desktop Wireframe](https://i.ibb.co/2h3VZ4j/desktopwireframe.png)
 ![Figma Desktop Wireframe](https://i.ibb.co/58ZPzNR/desktopwireframe2.png)
 
@@ -61,7 +63,7 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
 
 #### Component Hierarchy
 
-![Component Tree Sample](https://i.ibb.co/HqL2JRk/Component-hierarchy.png)
+![Component Tree Sample](https://i.ibb.co/3yzrD0b/Component-Tree.png)
 
 #### Component Architecture
 
@@ -72,7 +74,7 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
 ### Server (Back End)
 
 #### ERD Model
-![ERD Model](https://i.ibb.co/DGp49yH/erd.png>)
+![ERD Model](<https://i.ibb.co/jD3sR34/erd-model.png)
 
 #### Time Estimates
 
@@ -83,12 +85,12 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
 | Seed Data                      | H  | 1 hrs                      
 | Migrations and Schema          | H  | 2 hrs                       
 | Routes                         | H  | 2 hrs                       
-| Create CRUD Actions (frontend) | H  | 2 hrs                        
+| Create CRUD Actions (frontend) | H  | 6 hrs                        
 | Services Files                 | H  | 4 hrs                       
 | Frontend CRUD edits            | H  | 6 hrs                      
 | Debugging                      | H  | 4 hrs                      
 | CSS                            | H  | 8 hrs                    
-| Total                          |    | 40 hrs                   
+| Total                          |    | 46 hrs                   
 <br>
 
 ## Post-MVP
