@@ -90,7 +90,7 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
 ## Post-MVP
 
 - Implement a 'like' button
--Display top liked posts
+- Display top liked posts
 
 ***
 
