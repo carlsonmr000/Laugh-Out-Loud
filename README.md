@@ -19,6 +19,10 @@ LaughOutLoud is a building a comedy community through jokes. Users can submit th
   - Render data using functional React components
   - Utilize React Router for client side routing
   - Full CRUD functionality 
+  - Users submit a joke
+  - Users can comment on a other user's jokes
+  - Users can edit jokes that they created
+  - Users can delete their jokes
 
 - Styling
   - Styled with CSS
