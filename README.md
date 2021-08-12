@@ -74,7 +74,7 @@ Figma: https://www.figma.com/file/yTOAeTIcYj8870XiL7wFFN/LaughOutLoud?node-id=0%
 ### Server (Back End)
 
 #### ERD Model
-![ERD Model](<https://i.ibb.co/jD3sR34/erd-model.png)
+![ERD Model](https://i.ibb.co/jD3sR34/erd-model.png)
 
 #### Time Estimates
 
