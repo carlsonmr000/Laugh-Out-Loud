@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 2021_08_12_143410) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.bigint "joke_id", null: false
-    t.bigint "user_id", null: false
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,7 +26,6 @@ ActiveRecord::Schema.define(version: 2021_08_12_143410) do
   create_table "jokes", force: :cascade do |t|
     t.string "title"
     t.string "content"
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_jokes_on_user_id"

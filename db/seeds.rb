@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Comment.destroy_all
+Comment.destroy_all
 User.destroy_all
 Joke.destroy_all
 
@@ -27,11 +27,7 @@ joke8 = Joke.create!(title: "How does a chicken imitate a dog?", content: "Bawk 
 
 pp "#{Joke.count} jokes created"
 
-# spicy = Flavor.create(name: "spicy")
-# sweet = Flavor.create(name: "sweet
-# bitter = Flavor.create(name: "bitt")er")
-# sour = Flavor.create(name: "sour")
-# salty = Flavor.create(name: "salty")
-# umami = Flavor.create(name: "umami")
+@comment_1 = Comment.create(content: "That's so funny!", joke_id: joke1[:id], user_id: flamingo[:id])
+@comment_1 = Comment.create(content: "Hilarious!", joke_id: joke1[:id], user_id: flamingo[:id])
 
-# pp "#{Flavor.count} flavors created"
+pp "#{Comment.count} comments created"

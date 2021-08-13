@@ -1,7 +1,7 @@
 class JokesController < ApplicationController
     before_action :get_joke, only: [:show, :update, :destroy]
-    # :add_flavor_to_food
-    # before_action :authorize_request, only: [:create, :update, :destroy]
+     :add_comment_to_joke
+     before_action :authorize_request, only: [:create, :update, :destroy]
   
     def index
       jokes = Joke.all
@@ -9,9 +9,8 @@ class JokesController < ApplicationController
     end
   
     def show
-      render json: @Joke
-    #   , include: 
-    #   :comments
+        @joke = Joke.find(params[:id])
+        render json: @joke, include: :comments
     end
   
     def create
@@ -36,16 +35,16 @@ class JokesController < ApplicationController
       render json: "DELETED"
     end
   
-    # # CUSTOM METHOD
-    # def add_comment_to_joke
-    #   comment = Comment.find_by(name: comment_params[:name])
-    #   if !@joke.comments.include? comment
-    #     @joke.comments.push(comment)
-    #     render json: @joke, include: :comments
-    #   else
-    #     render json: @joke, include: :comments
-    #   end
-    # end
+    # CUSTOM METHOD
+    def add_comment_to_joke
+      comment = Comment.find_by(name: comment_params[:name])
+      if !@joke.comments.include? comment
+        @joke.comments.push(comment)
+        render json: @joke, include: :comments
+      else
+        render json: @joke, include: :comments
+      end
+    end
   
     private
   
