@@ -30,7 +30,7 @@ export const verify = async () => {
   }
 }
 
-export const logout = () => {
+export const signout = () => {
   localStorage.removeItem("authToken")
   api.defaults.headers.common.authorization = null
 

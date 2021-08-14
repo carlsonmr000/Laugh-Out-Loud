@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { verify } from "../../services/users";
+import { Link, useHistory } from "react-router-dom";
+import { verify, signout } from "../../services/users";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Nav.css";
@@ -8,6 +8,7 @@ import "./Nav.css";
 const Nav = () => {
   const [userExists, setUserExists] = useState(null);
   // const [showMenu, setShowMenu] = useState(false);
+  const history = useHistory();
 
 
   useEffect(() => {
@@ -17,6 +18,8 @@ const Nav = () => {
     };
     checkSigned();
   }, []);
+
+
 
 //   useEffect(() => {
 //     const handleResize = () => {
@@ -34,6 +37,12 @@ const Nav = () => {
 //     }
 //   }, []);
 
+  const handleClick = async () => {
+   await signout();
+   setUserExists(false)
+      history.push("/");
+     
+}
 
   return (
     <header>
@@ -52,7 +61,8 @@ const Nav = () => {
           { userExists ? (
             <>
               <Link to="/add-wine">Add Joke</Link>
-              <Link to="/sign-out">Sign Out</Link>
+              <button onClick={handleClick}>Sign Out</button>
+            
             </>
           ) : (
             <>

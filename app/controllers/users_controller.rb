@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :authorize_request, only: [:verify]
   def index
     users = User.all
     render json: users
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   # CUSTOM METHODS
 # POST /users/login
   def login
-    user = User.find_by(username: user_login_params[:username])
+    user = User.find_by(email: user_login_params[:email])
 
     if user && user.authenticate(user_login_params[:password])
       token = create_token(user.id)
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
   end
 
   def user_login_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:email, :password)
   end
 
   def create_token(id)
