@@ -9,8 +9,9 @@ class JokesController < ApplicationController
     end
   
     def show
-        @joke = Joke.find(params[:id])
-        render json: @joke, include: :comments
+         @joke = Joke.find(params[:id])
+        render json: @joke
+        # , include: :comments
     end
   
     def create

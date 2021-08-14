@@ -31,9 +31,9 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/jokes" component={Jokes} />
-        <Route path="/add-joke" component={JokeCreate} />
+        <Route exact path="/add-joke"><JokeCreate user={user}  /></Route>        
         <Route exact path="/jokes/:id/edit" component={JokeEdit} />
-        <Route exact path="/jokes/:id" component={JokeDetail} />
+        <Route exact path="/jokes/:id"><JokeDetail /></Route>        
         <Route exact path="/login" component={LogIn} />
         <Route exact path="/log-in"><LogIn setUser={setUser} /></Route>
         <Route exact path="/sign-up"><SignUp setUser={setUser} /></Route>

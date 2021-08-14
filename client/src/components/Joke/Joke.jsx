@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import "./Joke.css";
 
 const Joke = (props) => {
-  const { jokeID, title, content, comment} = props.joke;
+  const { id, title, content, comment} = props.joke;
   return (
-    <Link className="joke" to={`/jokes/${jokeID}`}>
+
       <article>
         <div className="joke-header">
-          <h3>{title}</h3>
+        <Link className="joke" to={`/jokes/${id}`}>
+      <h3>{title}</h3></Link>
         </div>
         <div className="joke-content">
              <h3>{content}</h3>
@@ -16,7 +17,6 @@ const Joke = (props) => {
           <p>{comment}</p>
         </div>
       </article>
-    </Link>
   );
 };
 

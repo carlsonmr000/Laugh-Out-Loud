@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getJokes } from "../../services/jokes";
 import Joke from "../../components/Joke/Joke";
- import { Link, useParams } from "react-router-dom";
+ import { Link } from "react-router-dom";
 
 import "./Jokes.css";
 import Layout from "../../components/Layout/Layout";
@@ -9,9 +9,9 @@ import Layout from "../../components/Layout/Layout";
 
 const Jokes = () => {
   const [jokes, setJokes] = useState([]);
-   const [jokeList, setJokeList] = useState([]);
+  // const [jokeList, setJokeList] = useState([]);
 
-  const { id } = useParams();
+  // const { id } = useParams();
 
   
   useEffect(() => {

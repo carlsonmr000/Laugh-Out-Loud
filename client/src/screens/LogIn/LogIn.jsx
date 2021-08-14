@@ -9,7 +9,7 @@ const LogIn = (props) => {
   const { setUser } = props;
   const [returnUser, setReturnUser] = useState({
     email: "",
-    password: "",
+    password: "", 
   });
 
   const handleChange = (e) => {
