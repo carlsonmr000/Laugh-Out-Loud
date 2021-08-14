@@ -60,7 +60,7 @@ const Nav = () => {
           <Link to="/">Home</Link>
           { userExists ? (
             <>
-              <Link to="/add-wine">Add Joke</Link>
+              <Link to="/add-joke">Add Joke</Link>
               <button onClick={handleClick}>Sign Out</button>
             
             </>
@@ -78,7 +78,6 @@ const Nav = () => {
            <Link to="/" className="nav-link">Home</Link>
           {userExists ? (
             <>
-              <Link to="/add-wine" className="nav-link">Add Joke</Link>
               <Link to="/sign-out" className="nav-link">Sign Out</Link>
             </>
           ) : (

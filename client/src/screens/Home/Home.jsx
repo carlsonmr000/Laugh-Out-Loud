@@ -6,11 +6,12 @@ import {
    getJokes
 } from "../../services/jokes";
 import Joke from "../../components/Joke/Joke";
- import { Link, useParams } from "react-router-dom";
+ import { Link, useParams, useHistory } from "react-router-dom";
 
-const Home = () => {
+const Home = (props) => {
   // const [joke, setJoke] = useState(null);
   const [jokes, setJokes] = useState([]);
+  const history = useHistory();
  
   const { id } = useParams();
  
@@ -23,13 +24,17 @@ const Home = () => {
     fetchJokes();
   }, []);
 
+  const handleClick = () => {
+    props.user ? history.push("/create-joke") : history.push("/log-in")
+  }
+
 
   return (
     <Layout>
       <div className="welcome-container">
         <h1>WELCOME</h1>
         <p>Do you have a joke? You’re at the right place! Add a joke to our comedy community!</p>
-        <button className="add-joke-button"><Link className="create-link" to={`/create-joke`}>Add a joke</Link></button>
+        <button className="add-joke-button" onClick={handleClick}>Add a joke</button>
       </div>
 
 <section className="related-section">

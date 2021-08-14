@@ -10,16 +10,18 @@ const JokeEdit = (props) => {
     content: ''
   })
 
+  const params = useParams()
+
+
   const [isUpdated, setUpdated] = useState(false)
-  let { id } = useParams()
 
   useEffect(() => {
-    const fetchJoke = async () => {
-      const joke = await getOneJoke(id)
+    const fetchJoke = async (jokeID) => {
+      const joke = await getOneJoke(jokeID)
       setJoke(joke)
     }
-    fetchJoke()
-  }, [id])
+    fetchJoke(params.id)
+  }, [params.id])
 
   const handleChange = (event) => {
     const { title, value } = event.target
@@ -31,12 +33,12 @@ const JokeEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const updated = await updateJoke(id, joke)
+    const updated = await updateJoke(params.id, joke)
     setUpdated(updated)
   }
 
   if (isUpdated) {
-    return <Redirect to={`/jokes/${id}`} />
+    return <Redirect to={`/jokes`} />
   }
 
   return (

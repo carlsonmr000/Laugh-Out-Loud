@@ -29,9 +29,9 @@ const App = () => {
   return (
     <div className="app">
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/"><Home user={user}/></Route>        
         <Route exact path="/jokes" component={Jokes} />
-        <Route exact path="/add-joke"><JokeCreate user={user}  /></Route>        
+        <Route exact path="/create-joke"><JokeCreate user={user}  /></Route>        
         <Route exact path="/jokes/:id/edit" component={JokeEdit} />
         <Route exact path="/jokes/:id"><JokeDetail /></Route>        
         <Route exact path="/log-in"><LogIn setUser={setUser} /></Route>

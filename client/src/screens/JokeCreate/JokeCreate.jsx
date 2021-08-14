@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './JokeCreate.css'
 import Layout from '../../components/Layout/Layout'
 import { Redirect } from 'react-router-dom'
+import { verify } from "../../services/users";
 import { createJoke } from '../../services/jokes'
 
 const JokeCreate = (props) => {
@@ -12,25 +13,40 @@ const JokeCreate = (props) => {
         })
 
     const [isCreated, setCreated] = useState(false)
+    const [userBool, setUserBool] = useState(null);
 
-    const handleChange = (event) => {
-        const { title, value } = event.target
+    useEffect(() => {
+        const checkUser = async () => {
+          const userExists = await verify();
+          setUserBool(userExists ? true : false);
+        };
+        checkUser();
+      }, []);
+
+      const handleChange = (e) => {
+        const { name, value } = e.target;
         setJoke({
-                ...joke,
-                [title]: value
-        })
-    }
+          ...joke,
+          [name]: value,
+        });
+      };
+    
 
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-        const created = await createJoke(joke)
-        setCreated({ created })
-    }
-
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        const addJoke = async () => {
+          const created = await createJoke(joke);
+          setCreated({ created });
+        }
+        addJoke();
+      };
     if (isCreated) {
         return <Redirect to={`/jokes`} />
     }
-    return (
+
+    return !userBool && userBool !== null ?(
+        <Redirect to="/login" />
+      ) : (
         <Layout>
             <form className="create-form" onSubmit={handleSubmit}>
                 <input

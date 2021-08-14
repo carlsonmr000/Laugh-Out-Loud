@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './JokeDetail.css'
 import Layout from '../../components/Layout/Layout'
 import { getOneJoke, deleteJoke } from '../../services/jokes'
-import { useParams, Link, useHistory } from 'react-router-dom'
+import { useParams, useHistory, Link } from 'react-router-dom'
 
 const JokeDetail = (props) => {
 
@@ -35,13 +35,22 @@ const JokeDetail = (props) => {
         deleteOneJoke();
       };
 
+    //   const handleClick = () => {
+    //     props.user ? history.push("/jokes/${id}/edit") : history.push("/log-in")
+    //   }
+    
+
     return (
         <Layout>
             <div className="joke-detail">
                     <div className="title">{joke.title}</div>
                     <div className="content">{joke.content}</div>
                     <div className="button-container">
-                        <button className="edit-button"><Link className="edit-link" to={`/jokes/${joke._id}/edit`}>Edit</Link></button>
+                        {/* <button className="edit-button" onClick={handleClick}>Edit</button>
+                        <Link className="edit-link" to={`/jokes/${id}/edit`}>Edit</Link> */}
+                    <button className="edit-button"><Link className="edit-link" to={`/jokes/${id}/edit`}>Edit</Link></button>
+
+                        {/* <button className="add-joke-button" onClick={handleClick}>Add a joke</button> */}
                         <button className="delete-button" to="/jokes" onClick={handleSubmit}>Delete</button>
                     </div>
             </div>
