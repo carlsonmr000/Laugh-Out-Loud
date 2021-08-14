@@ -16,7 +16,7 @@ export const deleteJoke = async (jokeID) => {
 }
 
 export const createJoke = async (jokeData) => {
-  const res = await api.post("/jokes", { joke: jokeData })
+  const res = await api.post("/create-joke", { joke: jokeData })
   return res.data
 }
 

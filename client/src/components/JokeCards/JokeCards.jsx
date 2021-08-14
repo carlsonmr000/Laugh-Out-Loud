@@ -22,6 +22,7 @@ const JokeCards = () => {
           _id={joke._id}
           title={joke.title}
           content={joke.content}
+          comment={joke.comment}
           key={index}
         />
       ) : null

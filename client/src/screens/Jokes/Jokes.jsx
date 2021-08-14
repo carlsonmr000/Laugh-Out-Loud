@@ -1,50 +1,52 @@
-import { useState, useEffect } from 'react'
-import './Jokes.css'
-import Joke from '../../components/Joke/Joke'
-import Layout from '../../components/Layout/Layout'
-import Search from '../../components/Search/Search'
+import { useEffect, useState } from "react";
+import { getJokes } from "../../services/jokes";
+import Joke from "../../components/Joke/Joke";
+import { Link } from "react-router-dom";
 
-import { getJokes } from '../../services/jokes'
+import "./Jokes.css";
+import Layout from "../../components/Layout/Layout";
+ 
 
 const Jokes = () => {
-  const [jokes, setJokes] = useState([])
-  const [searchResult, setSearchResult] = useState([])
- 
+  const [jokes, setJokes] = useState([]);
+  // const [jokeList, setJokeList] = useState([]);
+
+  // const { id } = useParams();
+
+  
   useEffect(() => {
     const fetchJokes = async () => {
-      const allJokes = await getJokes()
-      setJokes(allJokes)
-      setSearchResult(allJokes)
-    }
-    fetchJokes()
-  }, [])
-
-  const handleSearch = (event) => {
-    const results = jokes.filter((joke) =>
-      joke.title.toLowerCase().includes(event.target.value.toLowerCase())
-    )
-    setSearchResult(results)
-  }
-
-  const handleSubmit = (event) => event.preventDefault()
+      const results = await getJokes();
+      setJokes(results);
+    };
+    fetchJokes();
+  }, []);
 
   return (
     <Layout>
-      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <div className='jokes'>
-        {searchResult.map((joke, index) => {
+      {/* <div className="all-jokes">
+        {jokeList.length ? (
+          jokeList.map((joke) => <Joke key={joke._id} joke={joke} />)
+        ) : (
+          <h2>Loading...</h2>
+        )}
+      </div> */}
+
+          <div className="jokes-container">
+    <p className="browse-jokes-button"><Link className="jokes-link" to={`/jokes`}>Browse jokes</Link></p>
+        {jokes.map((joke) => {
           return (
             <Joke
-              _id={joke._id}
+              id={joke.id}
               title={joke.title}
               content={joke.content}
-              key={index}
+              key={joke.id}
             />
-          )
+          );
         })}
-      </div>
+      </div> 
     </Layout>
-  )
-}
+  );
+};
 
-export default Jokes
+export default Jokes;

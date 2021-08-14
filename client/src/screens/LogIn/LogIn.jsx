@@ -1,84 +1,71 @@
-import { useState } from 'react'
-import './LogIn.css'
-import { signIn } from '../../services/users'
-import { useHistory } from 'react-router-dom'
+import { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
+import { login } from "../../services/users";
+import "./LogIn.css";
 
-const SignIn = (props) => {
-  const history = useHistory()
+const LogIn = (props) => {
+  const history = useHistory();
+  const { setUser } = props;
+  const [returnUser, setReturnUser] = useState({
+    email: "",
+    password: "",
+  });
 
-  const [form, setForm] = useState({
-    email: '',
-    password: '',
-    isError: false,
-    errorMsg: '',
-  })
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReturnUser({ ...returnUser, [name]: value });
+  };
 
-  const handleChange = (event) => {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value,
-    })
-  }
-
-  const onSignIn = async (event) => {
-    event.preventDefault()
-    const { setUser } = props
-    try {
-      const user = await signIn(form)
-      setUser(user)
-      history.push('/')
-    } catch (error) {
-      console.error(error)
-      setForm({
-        isError: true,
-        errorMsg: 'Invalid Credentials',
-        email: '',
-        password: '',
-      })
-    }
-  }
-
-  const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
-    if (form.isError) {
-      return (
-        <button type='submit' className={toggleForm}>
-          {form.errorMsg}
-        </button>
-      )
-    } else {
-      return <button type='submit'>Sign In</button>
-    }
-  }
-
-  const { email, password } = form
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const logInUser = async () => {
+      const signedInUser = await login(returnUser);
+      setUser(signedInUser);
+      setTimeout(() => {
+        history.push("/");
+      }, 500);
+    };
+    logInUser();
+  };
 
   return (
-    <div className='form-container'>
-      <h3>Sign In</h3>
-      <form onSubmit={onSignIn}>
-        <label>Email</label>
-        <input
-          required
-          type='text'
-          name='email'
-          value={email}
-          placeholder='Enter Email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
-  )
-}
+    <Layout>
+      <section className="sign-in-screen-text">
+        <h2>Welcome back!</h2>
+      </section>
+      <section className="sign-in-screen-form">
+        <h3>Log In</h3>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={returnUser.email}
+            onChange={handleChange}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={returnUser.password}
+            onChange={handleChange}
+          />
+          <button type="log-in-submit">
+            <h3>Submit</h3>
+          </button>
+        </form>
+        <p>
+          Don't have an account?{" "}
+          <Link to="/sign-up" className="sign-up-link">
+            Sign up!
+          </Link>
+        </p>
+      </section>
+    </Layout>
+  );
+};
 
-export default SignIn
+export default LogIn;

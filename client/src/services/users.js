@@ -1,6 +1,6 @@
 import api from "./apiConfig"
 
-export const register = async (userData) =>{
+export const signup = async (userData) =>{
   const res = await api.post("/users", { user: userData })
   const { token } = res.data
   if (token) {

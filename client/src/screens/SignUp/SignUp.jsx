@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './SignUp.css'
-import { signUp } from '../../services/users'
+import { signup } from '../../services/users'
+import Layout from "../../components/Layout/Layout";
 import { useHistory } from 'react-router-dom'
 
 const SignUp = (props) => {
@@ -10,7 +11,6 @@ const SignUp = (props) => {
     username: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
     isError: false,
     errorMsg: '',
   })
@@ -25,7 +25,7 @@ const SignUp = (props) => {
     event.preventDefault()
     const { setUser } = props
     try {
-      const user = await signUp(form)
+      const user = await signup(form)
       setUser(user)
       history.push('/')
     } catch (error) {
@@ -34,32 +34,41 @@ const SignUp = (props) => {
         username: '',
         email: '',
         password: '',
-        passwordConfirmation: '',
         isError: true,
         errorMsg: 'Sign Up Details Invalid',
       })
     }
   }
 
-  const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
-    if (form.isError) {
-      return (
-        <button type='submit' className={toggleForm}>
-          {form.errorMsg}
-        </button>
-      )
-    } else {
-      return <button type='submit'>Sign Up</button>
-    }
-  }
+  // const renderError = () => {
+  //   const toggleForm = form.isError ? 'danger' : ''
+  //   if (form.isError) {
+  //     return (
+  //       <button type='submit' className={toggleForm}>
+  //         {form.errorMsg}
+  //       </button>
+  //     )
+  //   } else {
+  //     return <button type='submit'>Sign Up</button>
+  //   }
+  // }
 
-  const { username, email, password, passwordConfirmation } = form
+  const { username, email, password } = form
 
   return (
-    <div className='form-container'>
+    <Layout>
+      <div className='form-container'>
       <h3>Sign Up</h3>
       <form onSubmit={onSignUp}>
+      <label>Email address</label>
+        <input
+          required
+          type='email'
+          name='email'
+          value={email}
+          placeholder='Enter email'
+          onChange={handleChange}
+        />
         <label>Username</label>
         <input
           required
@@ -67,15 +76,6 @@ const SignUp = (props) => {
           name='username'
           value={username}
           placeholder='Enter username'
-          onChange={handleChange}
-        />
-        <label>Email address</label>
-        <input
-          required
-          type='email'
-          name='email'
-          value={email}
-          placeholder='Enter email'
           onChange={handleChange}
         />
         <label>Password</label>
@@ -87,18 +87,13 @@ const SignUp = (props) => {
           placeholder='Password'
           onChange={handleChange}
         />
-        <label>Password Confirmation</label>
-        <input
-          required
-          name='passwordConfirmation'
-          value={passwordConfirmation}
-          type='password'
-          placeholder='Confirm Password'
-          onChange={handleChange}
-        />
-        {renderError()}
+            <button type="sign-up-submit">
+            <h3>Submit</h3>
+          </button>
       </form>
     </div>
+    </Layout>
+    
   )
 }
 

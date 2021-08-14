@@ -1,33 +1,19 @@
-import './Home.css'
-import JokeCards from '../../components/JokeCards/JokeCards'
-import Layout from '../../components/Layout/Layout'
+import "./Home.css";
+// import JokeCards from "../../components/JokeCards/JokeCards";
+import Layout from "../../components/Layout/Layout";
 import { useState, useEffect } from "react";
 import {
-  // getOneJoke,
-  getJokes
+   getJokes
 } from "../../services/jokes";
-// import Joke from "../../components/Joke/Joke";
-// import { verify } from "../../services/users";
-// import { useParams } from "react-router-dom";
+import Joke from "../../components/Joke/Joke";
+ import { Link, useParams } from "react-router-dom";
 
-const Home = (props) => {
-
+const Home = () => {
   // const [joke, setJoke] = useState(null);
-  const [jokes, setJokes] = useState(null);
-
-  const [isLoaded, setLoaded] = useState(false);
-  // const [userExists, setUserExists] = useState(null);
-  // const [toggleFetch, setToggleFetch] = useState(false);
-  // const { id } = useParams();
-
-  // useEffect(() => {
-  //   const fetchJoke = async () => {
-  //     const joke = await getOneJoke(id);
-  //     setJoke(joke);
-  //     setLoaded(true);
-  //   };
-  //   fetchJoke();
-  // }, [id, toggleFetch]);
+  const [jokes, setJokes] = useState([]);
+ 
+  const { id } = useParams();
+ 
 
   useEffect(() => {
     const fetchJokes = async () => {
@@ -37,38 +23,29 @@ const Home = (props) => {
     fetchJokes();
   }, []);
 
-  // useEffect(() => {
-  //   const checkSigned = async () => {
-  //     const valid = await verify();
-  //     setUserExists(valid ? true : false);
-  //   };
-  //   checkSigned();
-  // }, []);
-
-  if (!isLoaded) {
-    return <h1>Cannot load jokes</h1>;
-  }
-
 
   return (
     <Layout>
-      <div className="home">
-        <JokeCards />
+      <div className="welcome-container">
+        <h1>WELCOME</h1>
+        <p>Do you have a joke? You’re at the right place! Add a joke to our comedy community!</p>
+        <button className="add-joke-button"><Link className="create-link" to={`/create-joke`}>Add a joke</Link></button>
       </div>
-      {/* <section className="related-section">
-        <h1 className="related">Browse Jokes</h1>
-        <div className="all-jokes-detail">
+
+<section className="related-section">
+<p className="browse-jokes-button"><Link className="jokes-link" to={`/jokes`}>Browse jokes</Link></p>
+        <div className="jokes-detail">
           {jokes?.length ? (
             [...jokes]
               .splice(jokes.findIndex((joke) => joke._id === id)+ 1, 4)
-              .map((joke) => <Joke key={joke._id} joke={joke} />)
+              .map((joke) => <Joke key={joke.id} joke={joke}  />)
           ) : (
-            <h2>Failed to load jokes</h2>
+            <h2>Loading...</h2>
           )}
         </div>
-      </section> */}
+      </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
