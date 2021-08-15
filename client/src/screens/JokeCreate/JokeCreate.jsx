@@ -9,7 +9,8 @@ const JokeCreate = (props) => {
 
     const [joke, setJoke] = useState({
             title: '',
-            content: ''
+            content: '',
+            user_id: props.user?.id
         })
 
     const [isCreated, setCreated] = useState(false)
@@ -45,7 +46,7 @@ const JokeCreate = (props) => {
     }
 
     return !userBool && userBool !== null ?(
-        <Redirect to="/login" />
+        <Redirect to="/log-in" />
       ) : (
         <Layout>
             <form className="create-form" onSubmit={handleSubmit}>

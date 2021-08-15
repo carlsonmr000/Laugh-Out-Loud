@@ -15,7 +15,7 @@ const JokeEdit = (props) => {
 
   const params = useParams()
   const history = useHistory()
-  console.log(params.id)
+  // console.log(params.id)
 
   const [isUpdated, setUpdated] = useState(false)
 

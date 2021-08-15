@@ -44,6 +44,11 @@ const Nav = () => {
      
 }
 
+// const handleClick = () => {
+//   props.user ? history.push("/create-joke") : history.push("/log-in")
+// }
+
+
   return (
     <header>
       {/* <FontAwesomeIcon
@@ -60,7 +65,7 @@ const Nav = () => {
           <Link to="/">Home</Link>
           { userExists ? (
             <>
-              <Link to="/add-joke">Add Joke</Link>
+              <Link to="/create-joke">Add Joke</Link>
               <button onClick={handleClick}>Sign Out</button>
             
             </>

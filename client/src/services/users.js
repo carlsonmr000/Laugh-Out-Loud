@@ -11,7 +11,7 @@ export const signup = async (userData) =>{
 }
 
 export const login = async (userData) => {
-  const res = await api.post("/users/login", { user: userData })
+  const res = await api.post("/users/log-in", { user: userData })
   const { token } = res.data
   if (token) {
     localStorage.setItem('authToken', token)
