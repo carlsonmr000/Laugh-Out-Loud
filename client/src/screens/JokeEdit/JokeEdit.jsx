@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react'
 import './JokeEdit.css'
-import { useParams, Redirect } from 'react-router-dom'
+import { useParams, Redirect, useHistory } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
 import { getOneJoke, updateJoke } from '../../services/jokes'
 
 const JokeEdit = (props) => {
   const [joke, setJoke] = useState({
     title: '',
-    content: ''
+    content: '',
+    user_id: props.user?.id
   })
 
-  const params = useParams()
 
+
+  const params = useParams()
+  const history = useHistory()
+  console.log(params.id)
 
   const [isUpdated, setUpdated] = useState(false)
 
@@ -24,10 +28,10 @@ const JokeEdit = (props) => {
   }, [params.id])
 
   const handleChange = (event) => {
-    const { title, value } = event.target
+    const { name, value } = event.target
     setJoke({
       ...joke,
-      [title]: value,
+      [name]: value,
     })
   }
 
@@ -35,6 +39,7 @@ const JokeEdit = (props) => {
     event.preventDefault()
     const updated = await updateJoke(params.id, joke)
     setUpdated(updated)
+      history.push('/jokes')
   }
 
   if (isUpdated) {
