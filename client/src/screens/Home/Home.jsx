@@ -30,7 +30,7 @@ const Home = (props) => {
 
 
   return (
-    <Layout>
+    <>
       <div className="welcome-container">
         <h1>WELCOME</h1>
         <p>Do you have a joke? You’re at the right place! Add a joke to our comedy community!</p>
@@ -49,7 +49,7 @@ const Home = (props) => {
           )}
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

@@ -23,7 +23,7 @@ const Jokes = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
 <section className="related-section">
 <p className="browse-jokes-button"><Link className="jokes-link" to={`/jokes`}>Joke List</Link></p>
         <div className="jokes-detail">
@@ -35,7 +35,7 @@ const Jokes = () => {
           )}
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

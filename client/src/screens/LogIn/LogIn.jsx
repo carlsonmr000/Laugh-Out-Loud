@@ -30,7 +30,7 @@ const LogIn = (props) => {
   };
 
   return (
-    <Layout>
+    <>
       <section className="sign-in-screen-text">
         <h2>Welcome back!</h2>
       </section>
@@ -64,7 +64,7 @@ const LogIn = (props) => {
           </Link>
         </p>
       </section>
-    </Layout>
+    </>
   );
 };
 

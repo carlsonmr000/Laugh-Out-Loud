@@ -47,7 +47,7 @@ const JokeEdit = (props) => {
   }
 
   return (
-    <Layout>
+    <>
       <div className='joke-edit'>
         <form className='edit-form' onSubmit={handleSubmit}>
           <input
@@ -73,7 +73,7 @@ const JokeEdit = (props) => {
           </button>
         </form>
       </div>
-    </Layout>
+    </>
   )
 }
 

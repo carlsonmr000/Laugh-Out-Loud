@@ -5,49 +5,46 @@ import { verify, signout } from "../../services/users";
 // import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Nav.css";
 
-const Nav = () => {
-  const [userExists, setUserExists] = useState(null);
+const Nav = (props) => {
+  // const [userExists, setUserExists] = useState(null);
   // const [showMenu, setShowMenu] = useState(false);
   const history = useHistory();
 
 
-  useEffect(() => {
-    const checkSigned = async () => {
-      const valid = await verify();
-      setUserExists(valid ? true : false);
-    };
-    checkSigned();
-  }, []);
+  // useEffect(() => {
+  //   const checkSigned = async () => {
+  //     const valid = await verify();
+  //     setUserExists(valid ? true : false);
+  //   };
+  //   checkSigned();
+  // }, []);
 
-
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       // if we're at desktop size
-//       if (window.innerWidth > 425) {
-//         // untoggle the hamburger menu 
-//         setShowMenu(false);
-//       }
-//     }
-//     // add an event listener to the resize event on the window
-//     window.addEventListener('resize', handleResize);
-//     // unmounts we'll remove that event listener
-//     return () => {
-//       window.removeEventListener('resize', handleResize);
-//     }
-//   }, []);
+  //   useEffect(() => {
+  //     const handleResize = () => {
+  //       // if we're at desktop size
+  //       if (window.innerWidth > 425) {
+  //         // untoggle the hamburger menu
+  //         setShowMenu(false);
+  //       }
+  //     }
+  //     // add an event listener to the resize event on the window
+  //     window.addEventListener('resize', handleResize);
+  //     // unmounts we'll remove that event listener
+  //     return () => {
+  //       window.removeEventListener('resize', handleResize);
+  //     }
+  //   }, []);
 
   const handleClick = async () => {
-   await signout();
-   setUserExists(false)
-      history.push("/");
-     
-}
+    await signout();
+    props.setUser(false);
+    props.setToggleFetch((curr) => !curr);
+    history.push("/");
+  };
 
-// const handleClick = () => {
-//   props.user ? history.push("/create-joke") : history.push("/log-in")
-// }
-
+  // const handleClick = () => {
+  //   props.user ? history.push("/create-joke") : history.push("/log-in")
+  // }
 
   return (
     <header>
@@ -63,21 +60,18 @@ const Nav = () => {
       <nav className="navbar">
         <div className="navbar-left-container">
           <Link to="/">Home</Link>
-          { userExists ? (
+          {props.user ? (
             <>
               <Link to="/create-joke">Add Joke</Link>
               <button onClick={handleClick}>Sign Out</button>
-            
             </>
           ) : (
             <>
-            <Link to="/log-in">LogIn</Link>
-            <Link to="/sign-up">SignUp</Link>
-          </>
-        
+              <Link to="/log-in">LogIn</Link>
+              <Link to="/sign-up">SignUp</Link>
+            </>
           )}
         </div>
-
 
         {/* {showMenu ?  <div className="mobile-navbar-container">
            <Link to="/" className="nav-link">Home</Link>
@@ -91,7 +85,6 @@ const Nav = () => {
           )} 
         </div> : <></> } */}
       </nav>
-
     </header>
   );
 };

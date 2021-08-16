@@ -48,7 +48,7 @@ const JokeCreate = (props) => {
     return !userBool && userBool !== null ?(
         <Redirect to="/log-in" />
       ) : (
-        <Layout>
+        <>
             <form className="create-form" onSubmit={handleSubmit}>
                 <input
                     className="input-title"
@@ -70,7 +70,7 @@ const JokeCreate = (props) => {
                 />
                 <button type='submit' className="submit-button">Submit</button>
             </form>
-        </Layout>
+        </>
     )
 }
 
