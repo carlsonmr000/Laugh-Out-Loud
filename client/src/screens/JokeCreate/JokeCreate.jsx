@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './JokeCreate.css'
-import Layout from '../../components/Layout/Layout'
+// import Layout from '../../components/Layout/Layout'
 import { Redirect } from 'react-router-dom'
 import { verify } from "../../services/users";
 import { createJoke } from '../../services/jokes'

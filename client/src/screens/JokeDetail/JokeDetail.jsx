@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './JokeDetail.css'
-import Layout from '../../components/Layout/Layout'
+// import Layout from '../../components/Layout/Layout'
 import { getOneJoke, deleteJoke } from '../../services/jokes'
 import { useParams, useHistory } from 'react-router-dom'
 

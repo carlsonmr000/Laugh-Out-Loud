@@ -1,6 +1,6 @@
 import "./Home.css";
 // import JokeCards from "../../components/JokeCards/JokeCards";
-import Layout from "../../components/Layout/Layout";
+// import Layout from "../../components/Layout/Layout";
 import { useState, useEffect } from "react";
 import {
    getJokes

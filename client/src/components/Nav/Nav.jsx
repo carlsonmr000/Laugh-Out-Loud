@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { verify, signout } from "../../services/users";
+import { signout } from "../../services/users";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Nav.css";

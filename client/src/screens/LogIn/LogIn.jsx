@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import Layout from "../../components/Layout/Layout";
+// import Layout from "../../components/Layout/Layout";
 import { login } from "../../services/users";
 import "./LogIn.css";
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './SignUp.css'
 import { signup } from '../../services/users'
-import Layout from "../../components/Layout/Layout";
+// import Layout from "../../components/Layout/Layout";
 import { useHistory } from 'react-router-dom'
 
 const SignUp = (props) => {

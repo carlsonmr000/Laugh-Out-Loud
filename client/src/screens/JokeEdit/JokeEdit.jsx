@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './JokeEdit.css'
 import { useParams, Redirect, useHistory } from 'react-router-dom'
-import Layout from '../../components/Layout/Layout'
+// import Layout from '../../components/Layout/Layout'
 import { getOneJoke, updateJoke } from '../../services/jokes'
 
 const JokeEdit = (props) => {
