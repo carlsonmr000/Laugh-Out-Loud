@@ -30,7 +30,7 @@ const Home = (props) => {
 
 
   return (
-    <>
+    <div className="homepage-parent">
       <div className="welcome-container">
         <h1 className="welcome">WELCOME</h1>
         <p className="welcome-message">Do you have a joke? You’re at the right place! Add a joke to our comedy community!</p>
@@ -40,16 +40,19 @@ const Home = (props) => {
 <section className="related-section">
 <p className="browse-jokes-button"><Link className="jokes-link" to={`/jokes`}>Browse jokes</Link></p>
         <div className="jokes-detail">
+          <div className="joke-parent">
           {jokes?.length ? (
             [...jokes]
               .splice(jokes.findIndex((joke) => joke._id === id)+ 1, 4)
-              .map((joke) => <Joke key={joke.id} joke={joke}  />)
-          ) : (
-            <h2>Loading...</h2>
-          )}
+              .map((joke) => 
+                <Joke key={joke.id} joke={joke}  />
+                )) : (
+                  <h2>Loading...</h2>
+                  )}
+                  </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -1,88 +1,84 @@
-.welcome-container{
-    position: absolute;
-width: 1477px;
-height: 508px;
-left: 0px;
-top: 75px;
-
-background: #44A3E8;
-width: 100%;
-padding: 150px;
+.homepage-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.welcome-container {
+  display: flex;
+  background: #44a3e8;
+  width: 100vw;
+  flex-direction: column;
+  margin-bottom: 8vh;
+  padding-bottom: 2vh;
 }
 
 .welcome {
-    position: absolute;
-    width: 448px;
-    height: 92px;
-    left: 750px;
-    top: 15px;
-    
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: lighter;
-    font-size: 13rem;
-    line-height: 91px;
-    flex-wrap: wrap;    
-    letter-spacing: 10px;
-    color: #FFFFFF;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 5rem;
+  line-height: 91px;
+  flex-wrap: wrap;
+  letter-spacing: 3px;
+  color: #ffffff;
+  padding: 10vh, 0;
 }
 
 .welcome-message {
-display: flex;
-align-content: center;
-justify-content: center;
-margin: 200px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
 
-font-family: "Roboto", sans-serif;
-font-style: bold;
-font-weight: 300;
-font-size: 6.5rem;
-line-height: 110px;
-letter-spacing: 5px;
-color: #000000;
-flex-wrap: wrap;
-
+  font-family: "Roboto", sans-serif;
+  font-style: bold;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: 2px;
+  color: #000000;
+  width: 25vw;
+  margin-top: -5vh;
 }
 
 .add-joke-button {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: -250px 900px;
-    text-align: center;
+
+    align-self: center;
+    width: 10vw;
+    height: 6vh;
     background: black;
-    border-radius: 45px;
-font-family: "Roboto", sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 2rem;
-line-height: 23px;
-color: white;
-padding: 30px 90px;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
 }
 
 .add-joke-button:hover {
    cursor: pointer;
    text-decoration: underline;
-}
+} 
+
 
 .jokes-link {
-   
-    color: #FE6C03;
+    height: 1vh;
+    color: #44A3E8;
     text-decoration: none;
-    position: absolute;
-    /* display: flex; */
-    z-index: 1;
-    padding: 20px;
-    margin: 550px 800px;
-    line-height: 50px;
-
-    justify-content: center;
-    background: linear-gradient(to right, #44A3E8, #44A3E8) no-repeat right;
+     z-index: 1;
+    padding: 1vw;
+    background: linear-gradient(to right, #FE6C03, #FE6C03) no-repeat right;
     background-size: 0% auto;
     white-space: nowrap;
     transition: background-size 0.3s, 
     background-position 0s;
+    width: 20vw;
+    font-size: 2rem;
 }
 
 .jokes-link:hover {
@@ -90,38 +86,46 @@ padding: 30px 90px;
       background-position: left;
     }
     
-.related-section {
-    /* display: flex; */
-    justify-content: space-evenly;
-    border-bottom: 1px solid white;
-    /* flex-flow: row wrap; */
-    /* align-items: flex-end; */
-    background-color: white;
-    /* padding: 50px 0; */
-    width: 100%;
+ .related-section {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    flex-direction: column;
+    /* border-bottom: 1px solid white; */
+    /* background: rgba(196, 196, 196, 0.25);     */
+    width: 85vw;
+    height: 20vh;
+    align-items: center;
 
-}
 
-.related-section {
+} 
+
+.joke-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    width: 100vh;
   }
+  
+/* 
+ .related-section {
+    flex-direction: row;
+} 
 
-  /* .related-section {
-    border-bottom: none;
-  } */
-
-.jokes-detail {
+ .jokes-detail {
     display: flex;
     background-color: rgba(196, 196, 196, 0.25);
     justify-content: space-evenly;
     flex-flow: row wrap;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
-}
+    align-items: center;
+    margin: 10px auto;
+} 
 
 .browse-jokes-button {
-
 position: absolute;
 width: 3px;
 height: 3px;
@@ -135,4 +139,4 @@ font-size: 5rem;
 line-height: 28px;
 
 color: #44A3E8;
-}
+} */

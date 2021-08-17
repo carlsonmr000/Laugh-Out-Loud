@@ -2,21 +2,22 @@ import { Link } from "react-router-dom";
 import "./Joke.css";
 
 const Joke = (props) => {
-  const { id, title, content, comment} = props.joke;
+  const { id, title, content } = props.joke;
   return (
+    
+    <div className="joke-parent">
 
-      <article className="joke-detail-container">
-        <div className="joke-header">
+      <div className="joke-container">
+
+        <div className="title">
         <Link className="joke" to={`/jokes/${id}`}>
-      <h3 className="individiual-joke-header">{title}</h3></Link>
+          <h3 className="joke-header">{title}</h3>
+        </Link>
+
         </div>
-        <div className="joke-content">
-             <h3>{content}</h3>
-        </div>
-        <div className="joke-comment">
-          <p>{comment}</p>
-        </div>
-      </article>
+        <h3 className="joke-content">{content}</h3>
+      </div>
+    </div>
   );
 };
 

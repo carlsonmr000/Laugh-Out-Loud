@@ -1,71 +1,41 @@
-/* .joke-detail-container {
 
-position: absolute;
-width: 225px;
-height: 205px;
-left: 151px;
-top: 696px;
 
-background: #FE6C03;
-}
+.joke-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+  margin: 5px;
+  color: white;
+  width: 20vw;
+  background-color: #FE6C03;
+  z-index: -1;
+  height: 25vh;
+} 
 
 .joke-header {
-    position: absolute;
-width: 226px;
-height: 58px;
-left: 150px;
-top: 696px;
-
-background: #C4C4C4;
+   
+  display: flex;
+  flex-direction: column;
+  background-color: #C4C4C4;
+  text-decoration: none;
+  width: 20vw;
+  height: 8vh;
+  font-size: .7rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  color: black;
+  text-align: center;
+  
 }
+
+
 
 .joke-content {
-    position: absolute;
-width: 140px;
-height: 94px;
-left: 210px;
-top: 790px;
-
-font-family: "Roboto", sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 36px;
-line-height: 42px;
-
-color: #FFFFFF;
-} */
-
-  
-.joke-detail-container {
-  text-decoration: none;
-  color: white;
-  background-color: #FE6C03;
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 1.5rem;
+  width: 20vw;
+  height: 28vh;
   text-align: center;
-  margin: 20px;
-  padding: 20px;
-  overflow: hidden;
-  transition: all 0.5s ease-out;
-  border-radius: 2px;
-  padding: 1px;
 }
-
-.joke-header {
-  min-height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #C4C4C4;
-  width: 100%
-}
-
-.individual-joke-header {
-    text-decoration: none;
-    color: black;
-}
-
- 
  
