@@ -1,5 +1,6 @@
 .nav {
   display: flex;
+  text-decoration: none;
 }
 
 .navbar-title {
@@ -14,8 +15,6 @@
   font-weight: 200;
   font-size: 2.5rem;
   line-height: 41px;
-  text-decoration: none;
-
   color: #000000;
 }
 
@@ -30,7 +29,6 @@
   font-weight: bold;
   font-size: 4rem;
   line-height: 64px;
-  text-decoration: none;
   text-transform: uppercase;
 
   color: #000000;
@@ -41,22 +39,30 @@
 width: 92px;
 height: 22px;
 left: 2000px;
-top: 30px;
+top: 33px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 28px;
-  text-decoration: none;
   color: #000000;
+  text-decoration: none;
+}
+
+.home:hover,
+.login:hover,
+.signup:hover,
+.navbar-title:hover,
+.navbar-title-two:hover {
+  color: #FE6C03;
 }
 
 .login {
     position: absolute;
     width: 88px;
     height: 22px;
-    left: 2200px;
-    top: 29px;
+    left: 2210px;
+    top: 33px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -70,7 +76,7 @@ top: 30px;
     width: 88px;
     height: 22px;
     left: 2400px;
-    top: 32px;
+    top: 33px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
