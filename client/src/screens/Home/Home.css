@@ -67,18 +67,19 @@
 
 
 .jokes-link {
-    height: 1vh;
+    height: .5vh;
     color: #44A3E8;
     text-decoration: none;
      z-index: 1;
-    padding: 1vw;
-    background: linear-gradient(to right, #FE6C03, #FE6C03) no-repeat right;
+    padding: .2vw;
+    background: linear-gradient(to right, #b1d5ee, #b1d5ee) no-repeat right;
     background-size: 0% auto;
     white-space: nowrap;
     transition: background-size 0.3s, 
     background-position 0s;
     width: 20vw;
     font-size: 2rem;
+    margin: 0 auto;
 }
 
 .jokes-link:hover {

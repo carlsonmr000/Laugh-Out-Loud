@@ -27,10 +27,12 @@
   margin: 0px;
   color: black;
   text-align: center;
-
   
 }
 
+.joke-header:hover {
+  color: white;
+}
 
 
 .joke-content {

@@ -27,8 +27,9 @@ a {
 
 .item:hover,
 .navbar-title:hover {
-  color: #FE6C03;
-  background-color: rgba(0, 0, 0, 0.1);
+  color: #44A3E8;
+  background-color: #dee8f0;
+  cursor: pointer;
 
 }
 
@@ -43,4 +44,5 @@ a {
   font-style: normal;
   line-height: 28px;
   text-decoration: none;
+  border: none;
 }

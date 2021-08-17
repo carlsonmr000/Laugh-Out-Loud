@@ -24,7 +24,7 @@ const Nav = (props) => {
           <Link to="/" className="item">Home</Link>
           {props.user ? (
             <>
-              <Link to="/create-joke" className="add-joke-link">Add Joke</Link>
+              <Link to="/create-joke" className="item">Add Joke</Link>
               <button className="item" onClick={handleClick}>Sign-Out</button>
             </>
           ) : (
