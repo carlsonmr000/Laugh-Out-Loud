@@ -54,21 +54,24 @@ const Nav = (props) => {
         onClick={() => setShowMenu(!showMenu)}
       /> */}
       <Link to="/" className="nav">
-        <h1 className="navbar-title">LaughOutLOUD</h1>
+        <h1 className="navbar-title">LaughOut</h1>
+        <h1 className="navbar-title-two">Loud</h1>
+        
+
       </Link>
 
       <nav className="navbar">
         <div className="navbar-left-container">
-          <Link to="/">Home</Link>
+          <Link to="/" className="home">Home</Link>
           {props.user ? (
             <>
-              <Link to="/create-joke">Add Joke</Link>
+              <Link to="/create-joke" className="add-joke-link">Add Joke</Link>
               <button onClick={handleClick}>Sign Out</button>
             </>
           ) : (
             <>
-              <Link to="/log-in">LogIn</Link>
-              <Link to="/sign-up">SignUp</Link>
+              <Link to="/log-in" className="login">LogIn</Link>
+              <Link to="/sign-up" className="signup">Sign Up</Link>
             </>
           )}
         </div>

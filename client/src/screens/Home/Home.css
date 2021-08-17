@@ -1,3 +1,125 @@
-jokes-container{
-    background-color: black;
+.welcome-container{
+    position: absolute;
+width: 1477px;
+height: 508px;
+left: 0px;
+top: 75px;
+
+background: #44A3E8;
+width: 100%;
+padding: 150px;
+}
+
+.welcome {
+    position: absolute;
+    width: 448px;
+    height: 92px;
+    left: 900px;
+    top: 15px;
+    
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 9rem;
+    line-height: 91px;
+    flex-wrap: wrap;    
+    letter-spacing: 10px;
+    color: #FFFFFF;
+}
+
+.welcome-message {
+display: flex;
+align-content: center;
+justify-content: center;
+margin: 150px;
+
+font-family: "Roboto", sans-serif;
+font-style: bold;
+font-weight: 300;
+font-size: 6rem;
+line-height: 120px;
+letter-spacing: 10px;
+color: #000000;
+
+}
+
+.add-joke-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: -200px 900px;
+    text-align: center;
+    background: #000000;
+    border-radius: 45px;
+font-family: "Roboto", sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 3rem;
+line-height: 23px;
+color: #FFFFFF;
+padding: 30px 90px;
+}
+
+.jokes-link {
+    position: absolute;
+width: 100%;
+height: 36px;
+left: 680px;
+top: 596px;
+
+font-family: "Roboto", sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 8rem;
+line-height: 28px;
+text-decoration: none;
+
+color: #44A3E8;
+}
+
+.related-section {
+    /* display: flex; */
+    justify-content: space-evenly;
+    border-bottom: 1px solid white;
+    /* flex-flow: row wrap; */
+    /* align-items: flex-end; */
+    background-color: white;
+    /* padding: 50px 0; */
+    width: 100%;
+
+}
+
+.related-section {
+    flex-direction: row;
+  }
+
+  /* .related-section {
+    border-bottom: none;
+  } */
+
+.jokes-detail {
+    display: flex;
+    background-color: rgba(196, 196, 196, 0.25);
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.browse-jokes-button {
+
+position: absolute;
+width: 3px;
+height: 3px;
+left: 180px;
+top: 300px;
+
+font-family: "Roboto", sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 5rem;
+line-height: 28px;
+
+color: #44A3E8;
 }

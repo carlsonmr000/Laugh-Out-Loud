@@ -32,8 +32,8 @@ const Home = (props) => {
   return (
     <>
       <div className="welcome-container">
-        <h1>WELCOME</h1>
-        <p>Do you have a joke? You’re at the right place! Add a joke to our comedy community!</p>
+        <h1 className="welcome">WELCOME</h1>
+        <p className="welcome-message">Do you have a joke? You’re at the right place! Add a joke to our comedy community!</p>
         <button className="add-joke-button" onClick={handleClick}>Add a joke</button>
       </div>
 

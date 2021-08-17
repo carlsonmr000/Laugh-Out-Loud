@@ -4,7 +4,6 @@ import Joke from "../../components/Joke/Joke";
  import { Link } from "react-router-dom";
 
 import "./Jokes.css";
-import Layout from "../../components/Layout/Layout";
  
 
 const Jokes = () => {

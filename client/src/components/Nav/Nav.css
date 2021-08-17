@@ -1,72 +1,82 @@
-/* 
-
-nav {
-    flex: 1;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    z-index: 1;
-    top: 0;
-    left: 0;
-}
-
 .nav {
-    display: flex;
-    padding: 20px 0;
-    margin-left: -2px;
-    margin-right: -2px;
-    margin-top: -2px;
-    box-shadow: 1px 1px 1px .3px #CECECE;
-    width: 100%;
+  display: flex;
 }
 
-.logo {
-    font-family: 'Roboto', cursive;
-    text-align: center;
-    font-weight: bold;
-    font-size: 34px;
-    letter-spacing: -3px;
-    flex: 1;
-    max-width: 30vw;
-    transition: 250ms all;
+.navbar-title {
+  background-color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 30px 15px;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 2.5rem;
+  line-height: 41px;
+  text-decoration: none;
+
+  color: #000000;
 }
 
-.logo:hover {
-    transform: scale(1.004);
+.navbar-title-two {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 15px -15px;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 64px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #000000;
 }
 
-.links {
-    flex: 2;
-    max-width: 30vw;
-    align-items: center;
-    font-size: 24px;
-    display: flex;
+.home {
+    position: absolute;
+width: 92px;
+height: 22px;
+left: 2000px;
+top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #000000;
 }
 
-.link {
-    flex: 1;
+.login {
+    position: absolute;
+    width: 88px;
+    height: 22px;
+    left: 2200px;
+    top: 29px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #000000;
 }
+.signup {
+    position: absolute;
+    width: 88px;
+    height: 22px;
+    left: 2400px;
+    top: 32px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
 
-a {
-    text-decoration: none;
-    color: black;
+  color: #000000;
 }
-
-@media (max-width: 500px) {
-    nav {
-        width: 98%;
-    }
-    .logo {
-        max-width: 50%;
-    }
-    .links {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 50vw;
-    }
-    .link {
-        padding: 3px;
-    }
-} */
