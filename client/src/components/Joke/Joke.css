@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: space-around;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 5px;
   color: white;
   width: 20vw;
   background-color: #FE6C03;
-  z-index: -1;
+  z-index: 10;
   height: 25vh;
 } 
 
@@ -27,6 +27,7 @@
   margin: 0px;
   color: black;
   text-align: center;
+
   
 }
 

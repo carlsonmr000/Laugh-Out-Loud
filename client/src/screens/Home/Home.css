@@ -96,6 +96,7 @@
     width: 85vw;
     height: 20vh;
     align-items: center;
+    margin: auto;
 
 
 } 
@@ -105,38 +106,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 100vh;
+    width: 50vh;
   }
   
-/* 
- .related-section {
-    flex-direction: row;
-} 
-
- .jokes-detail {
-    display: flex;
-    background-color: rgba(196, 196, 196, 0.25);
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    align-items: center;
-    margin: 10px auto;
-} 
-
-.browse-jokes-button {
-position: absolute;
-width: 3px;
-height: 3px;
-left: 180px;
-top: 300px;
-
-font-family: "Roboto", sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 5rem;
-line-height: 28px;
-
-color: #44A3E8;
-} */

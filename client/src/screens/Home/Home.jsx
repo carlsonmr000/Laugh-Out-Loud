@@ -39,7 +39,7 @@ const Home = (props) => {
 
 <section className="related-section">
 <p className="browse-jokes-button"><Link className="jokes-link" to={`/jokes`}>Browse jokes</Link></p>
-        <div className="jokes-detail">
+        {/* <div className="jokes-detail"> */}
           <div className="joke-parent">
           {jokes?.length ? (
             [...jokes]
@@ -50,7 +50,7 @@ const Home = (props) => {
                   <h2>Loading...</h2>
                   )}
                   </div>
-        </div>
+        {/* </div> */}
       </section>
     </div>
   );

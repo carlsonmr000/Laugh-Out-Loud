@@ -25,7 +25,7 @@ const Jokes = () => {
     <>
 <section className="related-section">
 <p className="browse-jokes-button"><Link className="jokes-link" to={`/jokes`}>Joke List</Link></p>
-        <div className="jokes-detail">
+        <div className="jokes-parent">
           {jokes?.length ? (
             [...jokes]
               .map((joke) => <Joke key={joke.id} joke={joke}  />)

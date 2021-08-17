@@ -1,0 +1,11 @@
+
+.jokes-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-flow: row wrap;
+    margin-top: 30%;
+  }
+  

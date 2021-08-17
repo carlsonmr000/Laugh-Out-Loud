@@ -5,7 +5,7 @@ const Joke = (props) => {
   const { id, title, content } = props.joke;
   return (
     
-    <div className="joke-parent">
+    // <div className="joke-parent">
 
       <div className="joke-container">
 
@@ -17,7 +17,7 @@ const Joke = (props) => {
         </div>
         <h3 className="joke-content">{content}</h3>
       </div>
-    </div>
+    // </div>
   );
 };
 
