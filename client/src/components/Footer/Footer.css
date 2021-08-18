@@ -1,4 +1,6 @@
-
+.footer-container {
+  z-index: 7;
+}
 .footer {
     /* padding: -80vh; */
     box-sizing: border-box;

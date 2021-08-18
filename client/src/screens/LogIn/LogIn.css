@@ -43,6 +43,11 @@
     margin-bottom: 2vh;
 }
 
+.login-email,
+.login-password {
+    width: 15vw;
+}
+
 .email-label,
 .password-label {
     font-size: 1.5rem;

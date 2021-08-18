@@ -52,6 +52,12 @@
    margin-bottom: 2vh;
 }
 
+.signup-email,
+.signup-username,
+.signup-password {
+    width: 20vw;
+}
+
 .login-link{
     color: black;
 }
