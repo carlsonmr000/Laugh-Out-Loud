@@ -52,7 +52,7 @@ const JokeCreate = (props) => {
           Title:
         </label>
         <input
-          className="input-title"
+          className="create-input-title"
           placeholder="Title"
           value={joke.title}
           name="title"
@@ -64,7 +64,7 @@ const JokeCreate = (props) => {
           Content:
         </label>
         <textarea
-          className="textarea-content"
+          className="create-textarea-content"
           rows={5}
           placeholder="Content"
           value={joke.content}

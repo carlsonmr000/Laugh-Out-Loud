@@ -25,8 +25,8 @@
     cursor: pointer;
 }
 
-.input-title,
-.textarea-content,
+.create-input-title,
+.create-textarea-content,
 .create-title,
 .create-content,
 .create-submit {
@@ -43,13 +43,13 @@
     font-size: 2rem;
 }
 
-.input-title,
-.textarea-content {
-    width: 65vw;
+.create-input-title,
+.create-textarea-content {
+    width: 25vw;
     margin-bottom: 2vh;
 }
 
-.textarea-content {
+.create-textarea-content {
     height: 25vh;
 }
 
