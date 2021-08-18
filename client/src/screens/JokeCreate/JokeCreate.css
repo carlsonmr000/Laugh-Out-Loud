@@ -45,6 +45,10 @@
 
 .input-title,
 .textarea-content {
-    width: 30vw;
+    width: 15vw;
     margin-bottom: 2vh;
+}
+
+.textarea-content {
+    height: 25vh;
 }
