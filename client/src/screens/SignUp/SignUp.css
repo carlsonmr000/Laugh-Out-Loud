@@ -1,0 +1,62 @@
+.signup-parent {
+    background-color: #FE6C03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vh;
+    margin: 70px auto;
+    height: 60vh;
+    padding-bottom: 6vh;
+ }
+
+ .signup-message {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+ }
+
+ .signup-submit {
+    background-color: #44A3E8;
+    border-radius: 15px;
+    width: 10vw;
+    height: 5vh;
+    color: white;
+    font-size: 1rem;
+    border: none;
+}
+
+.signup-submit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.signup-email-label,
+.signup-username-label,
+.signup-password-label {
+    font-size: 1.5rem;
+}
+
+.signup-email,
+.signup-username,
+.signup-password,
+.signup-email-label,
+.signup-username-label,
+.signup-password-label,
+.signup-submit {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 2vh;
+}
+
+.login-link{
+    color: black;
+}
+
+.login-link:hover {
+    color: white;
+    
+}

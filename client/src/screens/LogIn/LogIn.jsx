@@ -43,7 +43,7 @@ const LogIn = (props) => {
             id="email"
             value={returnUser.email}
             onChange={handleChange}
-            className="email"
+            className="login-email"
           />
           <label htmlFor="password" className="password-label">Password:</label>
           <input
@@ -52,9 +52,9 @@ const LogIn = (props) => {
             id="password"
             value={returnUser.password}
             onChange={handleChange}
-            className="password"
+            className="login-password"
           />
-          <button type="log-in-submit" className="submit">
+          <button type="log-in-submit" className="login-submit">
             <h3>Submit</h3>
           </button>
         </form>

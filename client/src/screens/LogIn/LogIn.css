@@ -16,24 +16,25 @@
     font-size: 3rem;
 }
 
-.submit {
+.login-submit {
     background-color: #44A3E8;
     border-radius: 15px;
     width: 10vw;
     height: 5vh;
     color: white;
     font-size: 1rem;
+    border: none;
 }
 
-.submit:hover {
+.login-submit:hover {
     text-decoration: underline;
     cursor: pointer;
 }
- .email,
- .password,
+ .login-email,
+ .login-password,
  .email-label,
  .password-label,
- .submit {
+ .login-submit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +57,3 @@
     
 }
 
-.email {
-    background-color: white;
-}

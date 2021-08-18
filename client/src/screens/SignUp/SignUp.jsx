@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './SignUp.css'
 import { signup } from '../../services/users'
-// import Layout from "../../components/Layout/Layout";
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const SignUp = (props) => {
   const history = useHistory()
@@ -57,10 +56,10 @@ const SignUp = (props) => {
 
   return (
     <>
-      <div className='form-container'>
-      <h3>Sign Up</h3>
+      <div className='signup-parent'>
+      <h3 className="signup-message">Sign Up</h3>
       <form onSubmit={onSignUp}>
-      <label>Email address</label>
+      <label className="signup-email-label">Email address:</label>
         <input
           required
           type='email'
@@ -68,8 +67,9 @@ const SignUp = (props) => {
           value={email}
           placeholder='Enter email'
           onChange={handleChange}
+          className="signup-email"
         />
-        <label>Username</label>
+        <label className="signup-username-label">Username:</label>
         <input
           required
           type='text'
@@ -77,8 +77,9 @@ const SignUp = (props) => {
           value={username}
           placeholder='Enter username'
           onChange={handleChange}
+          className="signup-username"
         />
-        <label>Password</label>
+        <label className="signup-password-label">Password:</label>
         <input
           required
           name='password'
@@ -86,11 +87,18 @@ const SignUp = (props) => {
           type='password'
           placeholder='Password'
           onChange={handleChange}
+          className="signup-password"
         />
-            <button type="sign-up-submit">
+            <button type="submit" className="signup-submit">
             <h3>Submit</h3>
           </button>
       </form>
+      <p>
+          Already have an account?{" "}
+          <Link to="/log-in" className="login-link">
+            Log In!
+          </Link>
+        </p>
     </div>
     </>
     
