@@ -9,7 +9,7 @@
   background: #44a3e8;
   width: 100vw;
   flex-direction: column;
-  margin-bottom: 8vh;
+  /* margin-bottom: 8vh; */
   padding-bottom: 2vh;
 }
 
@@ -96,10 +96,10 @@
     /* border-bottom: 1px solid white; */
     /* background: rgba(196, 196, 196, 0.25);     */
     width: 85vw;
-    height: 50vh;
+    height: 37vh;
     align-items: center;
     margin: auto;
-    margin-top: -100px;
+    /* margin-top: -15vh; */
 
 
 } 
