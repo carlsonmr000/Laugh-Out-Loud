@@ -1,0 +1,61 @@
+.log-in-parent {
+    background-color: #FE6C03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vh;
+    margin: 70px auto;
+    height: 60vh;
+ }
+
+
+.login-message {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.submit {
+    background-color: #44A3E8;
+    border-radius: 15px;
+    width: 10vw;
+    height: 5vh;
+    color: white;
+    font-size: 1rem;
+}
+
+.submit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+ .email,
+ .password,
+ .email-label,
+ .password-label,
+ .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.email-label,
+.password-label {
+    font-size: 1.5rem;
+}
+
+.sign-up-link{
+    color: black;
+}
+
+.sign-up-link:hover {
+    color: white;
+    
+}
+
+.email {
+    background-color: white;
+}

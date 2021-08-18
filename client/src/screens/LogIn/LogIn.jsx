@@ -30,30 +30,31 @@ const LogIn = (props) => {
   };
 
   return (
-    <>
+    <div className="log-in-parent">
       <section className="sign-in-screen-text">
-        <h2>Welcome back!</h2>
+        <h2 className="login-message">Log In</h2>
       </section>
       <section className="sign-in-screen-form">
-        <h3>Log In</h3>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
+         <form onSubmit={handleSubmit}>
+          <label htmlFor="email" className="email-label">Email:</label>
           <input
             type="email"
             name="email"
             id="email"
             value={returnUser.email}
             onChange={handleChange}
+            className="email"
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="password-label">Password:</label>
           <input
             type="password"
             name="password"
             id="password"
             value={returnUser.password}
             onChange={handleChange}
+            className="password"
           />
-          <button type="log-in-submit">
+          <button type="log-in-submit" className="submit">
             <h3>Submit</h3>
           </button>
         </form>
@@ -64,7 +65,7 @@ const LogIn = (props) => {
           </Link>
         </p>
       </section>
-    </>
+    </div>
   );
 };
 
