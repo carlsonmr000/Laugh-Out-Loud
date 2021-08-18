@@ -1,0 +1,50 @@
+.create-parent {
+    background-color: #FE6C03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vh;
+    margin: 70px auto;
+    height: 60vh;
+}
+
+.create-submit {
+    background-color: #44A3E8;
+    border-radius: 15px;
+    width: 10vw;
+    height: 5vh;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+}
+
+.create-submit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.input-title,
+.textarea-content,
+.create-title,
+.create-content,
+.create-submit {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 2vh;
+}
+
+.create-title,
+.create-content {
+    font-size: 2rem;
+}
+
+.input-title,
+.textarea-content {
+    width: 30vw;
+    margin-bottom: 2vh;
+}
