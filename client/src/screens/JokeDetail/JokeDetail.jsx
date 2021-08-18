@@ -42,7 +42,7 @@ const JokeDetail = (props) => {
       }
     
      return (
-        <>
+        <div>
             
             <div className="joke-detail">
                     <div className="detail-title">{joke.title}</div>
@@ -55,7 +55,7 @@ const JokeDetail = (props) => {
                               <button className="detail-delete" to="/jokes" onClick={handleSubmit}>Delete</button></> : <></>}
                     </div>
             </div>
-        </>
+        </div>
     )
 }
 
