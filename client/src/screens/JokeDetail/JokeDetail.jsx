@@ -45,12 +45,14 @@ const JokeDetail = (props) => {
         <>
             
             <div className="joke-detail">
-                    <div className="title">{joke.title}</div>
-                    <div className="content">{joke.content}</div>
+                    <div className="detail-title">{joke.title}</div>
+                    <div className="content-container">
+                    <div className="detail-content">{joke.content}</div>
+                    </div>
                     <div className="button-container">
 
-            {user ? <>  <button className="edit-button" onClick={handleClick}>Edit</button> 
-                              <button className="delete-button" to="/jokes" onClick={handleSubmit}>Delete</button></> : <></>}
+            {user ? <>  <button className="detail-edit" onClick={handleClick}>Edit</button> 
+                              <button className="detail-delete" to="/jokes" onClick={handleSubmit}>Delete</button></> : <></>}
                     </div>
             </div>
         </>
