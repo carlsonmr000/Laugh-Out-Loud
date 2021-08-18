@@ -59,3 +59,41 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+
+@media (max-width: 480px) {
+
+    .joke-detail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vh;
+        margin: 70px auto;
+        height: 60vh;
+    
+  }
+
+
+  .detail-title {
+
+    width: 55vw;
+    height: 15vh;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.content-container{
+    width: 55vw;
+}
+
+.detail-edit,
+.detail-delete {
+     
+    width: 25vw;
+    height: 5vh;
+    font-size: 1.5rem;
+}
+
+}

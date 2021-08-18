@@ -25,12 +25,12 @@ const Nav = (props) => {
           {props.user ? (
             <>
               <Link to="/create-joke" className="item">Add Joke</Link>
-              <button className="item" onClick={handleClick}>Sign-Out</button>
+              <button className="item" onClick={handleClick}>Sign Out</button>
             </>
           ) : (
             <>
-              <Link to="/log-in" className="item">Log-In</Link>
-              <Link to="/sign-up" className="item">Sign-Up</Link>
+              <Link to="/log-in" className="item">Log In</Link>
+              <Link to="/sign-up" className="item">Sign Up</Link>
             </>
           )}
         </div>

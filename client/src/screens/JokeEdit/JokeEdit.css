@@ -60,3 +60,49 @@
 .edit-textarea-content {
     height: 25vh;
 }
+
+
+@media (max-width: 480px) {
+
+    .joke-edit-parent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vh;
+        margin: 70px auto;
+        height: 60vh;
+    
+  }
+
+  .edit-title,
+  .edit-content {
+      font-size: 2rem;
+  }
+
+  .edit-input-title {
+      width: 65vw;
+      height: 7vh;
+  }
+
+
+  .edit-textarea-content {
+
+    width: 55vw;
+    height: 15vh;
+ 
+}
+
+.content-container{
+    width: 55vw;
+}
+
+
+.edit-save {
+     
+    width: 25vw;
+    height: 5vh;
+    font-size: 1.5rem;
+}
+
+}

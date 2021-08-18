@@ -10,3 +10,16 @@
     flex-direction: column;
     text-align: center;
   }
+
+  @media (max-width: 480px) {
+
+    .footer {
+      width: 40%;
+      text-align: center;
+      justify-content: center;
+      align-content: center;
+      /* padding: -50vh; */
+      margin: -1vh;
+    }
+  
+  }

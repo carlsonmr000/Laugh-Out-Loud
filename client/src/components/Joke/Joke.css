@@ -21,7 +21,7 @@
   text-decoration: none;
   width: 20vw;
   height: 8vh;
-  font-size: .7rem;
+  font-size: 1rem;
   align-items: center;
   justify-content: center;
   margin: 0px;
@@ -42,3 +42,21 @@
   text-align: center;
 }
  
+@media (max-width: 480px) {
+
+  .joke-container{
+    width: 50vw;
+    height: 25vh;
+    margin-top: 10px;
+    text-align: center;
+  }
+ 
+  .joke-header {
+    width: 50vw;
+    font-size: 1rem;
+  }
+
+  .joke-content {
+    text-align: center;
+  }
+}
