@@ -73,6 +73,7 @@
     text-decoration: none;
      z-index: 1;
     padding: .2vw;
+    /* I found code to create a highlight effect on the browse link here: https://dev.to/luisaugusto/creating-a-link-highlighting-effect-with-css-pp1÷ */
     background: linear-gradient(to right, #b1d5ee, #b1d5ee) no-repeat right;
     background-size: 0% auto;
     white-space: nowrap;
