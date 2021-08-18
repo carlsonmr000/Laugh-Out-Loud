@@ -7,6 +7,7 @@
     width: 100vh;
     margin: 70px auto;
     height: 60vh;
+    overflow: hidden;
 }
 
 .edit-save {
@@ -45,9 +46,15 @@
 
 .edit-input-title,
 .edit-textarea-content {
-    width: 15vw;
+    width: 30vw;
     margin-bottom: 2vh;
-    border: nones
+    border: none;
+}
+
+.edit-input-title {
+    height: 9vh;
+    width: 30vw;
+
 }
 
 .edit-textarea-content {
